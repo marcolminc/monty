@@ -72,7 +72,7 @@ FILE *open_file(const int argc, const char **argv)
 
 	if (argc != 2)
 	{
-		printf("USAGE: %s file\n", argv[0]);
+		fprintf(stderr, "USAGE: %s file\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
 	fp = fopen(argv[1], "r");
