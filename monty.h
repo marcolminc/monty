@@ -46,7 +46,6 @@ typedef struct instruction_s
 
 /*extern instruction_t *op_tbl[17];*/
 typedef void (*Operation)(stack_t **, unsigned int);
-extern char *arg;
 
 
 /* prototypes */

@@ -32,7 +32,7 @@ void push(stack_t **stack, const unsigned int line_number)
 	int value;
 	stack_t *new;
 
-	if (arg && is_full_int(arg, &value))
+	if (is_full_int(strtok(NULL, " \n"), &value))
 	{
 		if (!*stack)
 		{

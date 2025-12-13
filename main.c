@@ -11,7 +11,6 @@
  * Return: 0 for success
  */
 
-char *arg;
 int main(const int argc, char *argv[])
 {
 	FILE *fp;
@@ -35,7 +34,6 @@ int main(const int argc, char *argv[])
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
 				{
 					in_tbl++;
-					arg = strtok(NULL, " \t\n");
 					op_tbl[i]->f(&stack, nline);
 				}
 			}
