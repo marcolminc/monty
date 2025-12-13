@@ -25,11 +25,11 @@ int main(const int argc, char *argv[])
 	while (((nread = _getline(&line, &size, fp))) && nread != (size_t)-1)
 	{
 		nline++;
+		in_tbl = 0;
 		tok = strtok(line, " \t\n");
 		opcode = parse_opcode(tok);
 		if (opcode)
 		{
-			in_tbl = 0;
 			for (i = 0; i < 2; i++)
 			{
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
@@ -39,14 +39,15 @@ int main(const int argc, char *argv[])
 					op_tbl[i]->f(&stack, nline);
 				}
 			}
-			if (!in_tbl)
-			{
-				_perror(nline, tok);
-				cleanup(line, &stack, fp, op_tbl, 2);
-				exit(EXIT_FAILURE);
-			}
+		}
+		if (!opcode || !in_tbl)
+		{
+			_perror(nline, tok);
+			cleanup(line, &stack, fp, op_tbl, 2);
+			exit(EXIT_FAILURE);
 		}
 	}
-	cleanup(line, &stack, fp, op_tbl, 2), exit(EXIT_SUCCESS);
+	cleanup(line, &stack, fp, op_tbl, 2);
+	exit(EXIT_SUCCESS);
 }
 
