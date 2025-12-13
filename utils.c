@@ -10,7 +10,7 @@
  */
 void _perror(const size_t nline, const char *tok)
 {
-	fprintf(stderr, "L%lu: Unknown instruction %s\n", nline, tok);
+	fprintf(stderr, "L%lu: unknown instruction %s\n", nline, tok);
 }
 
 void cleanup(char *line, stack_t **stack, FILE *fp, instruction_t **op_tbl,
