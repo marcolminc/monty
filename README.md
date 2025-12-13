@@ -110,3 +110,9 @@ julien@ubuntu:~/monty$
 * If you can’t malloc anymore, print the error message Error: malloc failed, followed by a new line, and exit with status EXIT_FAILURE.
 * You have to use malloc and free and are not allowed to use any other function from man malloc (realloc, calloc, …)
 
+
+### Tasks
+1. 0 - push, pall: implement the `push` and `pall` opcodes.
+    * `push` pushes an element to the stack: push <int>
+    * `pall` prints all the values on the stack, starting from top of the stack
+
