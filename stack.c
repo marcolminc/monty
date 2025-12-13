@@ -67,11 +67,6 @@ void pall(stack_t **stack, const unsigned int line_number)
 	stack_t *tmp;
 
 	(void)line_number;
-	if (!*stack)
-	{
-		printf("Error: stack underflow\n");
-		exit(EXIT_FAILURE);
-	}
 	tmp = *stack;
 	while (tmp)
 	{
