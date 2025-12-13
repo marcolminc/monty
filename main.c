@@ -25,7 +25,7 @@ int main(const int argc, char *argv[])
 	while (((nread = _getline(&line, &size, fp))) && nread != (size_t)-1)
 	{
 		nline++;
-		tok = strtok(line, " \n");
+		tok = strtok(line, " \t\n");
 		opcode = parse_opcode(tok);
 		if (opcode)
 		{
@@ -35,7 +35,7 @@ int main(const int argc, char *argv[])
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
 				{
 					in_tbl++;
-					arg = strtok(NULL, " \n");
+					arg = strtok(NULL, " \t\n");
 					op_tbl[i]->f(&stack, nline);
 				}
 			}
