@@ -115,4 +115,6 @@ julien@ubuntu:~/monty$
 1. 0 - push, pall: implement the `push` and `pall` opcodes.
     * `push` pushes an element to the stack: push <int>
     * `pall` prints all the values on the stack, starting from top of the stack
+2. 1 - pint: implement the pint opcode
+3. 2 - pop: implement the pop opcode
 

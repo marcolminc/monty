@@ -28,7 +28,7 @@ int main(const int argc, char *argv[])
 		opcode = strtok(line, " \t\n");
 		if (opcode)
 		{
-			for (i = 0; i < 3; i++)
+			for (i = 0; i < 4; i++)
 			{
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
 				{
@@ -40,11 +40,11 @@ int main(const int argc, char *argv[])
 		if (opcode && !in_tbl)
 		{
 			_perror(nline, opcode);
-			cleanup(line, &stack, fp, op_tbl, 3);
+			cleanup(line, &stack, fp, op_tbl, 4);
 			exit(EXIT_FAILURE);
 		}
 	}
-	cleanup(line, &stack, fp, op_tbl, 3);
+	cleanup(line, &stack, fp, op_tbl, 4);
 	exit(EXIT_SUCCESS);
 }
 

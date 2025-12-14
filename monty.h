@@ -63,6 +63,7 @@ int is_full_int(const char *, int *);
 void push(stack_t **, unsigned int);
 void pall(stack_t **, unsigned int);
 void pint(stack_t **, unsigned int);
+void pop(stack_t **, unsigned int);
 void free_stack(stack_t **);
 void free_op_tbl(instruction_t **, unsigned int);
 
