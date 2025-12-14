@@ -78,7 +78,7 @@ FILE *open_file(const int argc, const char **argv)
 
 	if (!fp)
 	{
-		fprintf(stderr, "Error: Can't open file HolbErToN");
+		fprintf(stderr, "Error: Can't open file HoLbErToN\n");
 		exit(EXIT_FAILURE);
 	}
 	return (fp);
