@@ -14,7 +14,7 @@
 int main(const int argc, char *argv[])
 {
 	FILE *fp;
-	char *line, *tok, *opcode;
+	char *line, *opcode;
 	size_t size, nread, nline, i, in_tbl;
 	stack_t *stack;
 	instruction_t **op_tbl;
@@ -25,8 +25,7 @@ int main(const int argc, char *argv[])
 	{
 		nline++;
 		in_tbl = 0;
-		tok = strtok(line, " \t\n");
-		opcode = parse_opcode(tok);
+		opcode = parse_opcode(strtok(line, " \t\n"));
 		if (opcode)
 		{
 			for (i = 0; i < 2; i++)
@@ -38,9 +37,9 @@ int main(const int argc, char *argv[])
 				}
 			}
 		}
-		if (!opcode || !in_tbl)
+		if (opcode && !in_tbl)
 		{
-			_perror(nline, tok);
+			_perror(nline, opcode);
 			cleanup(line, &stack, fp, op_tbl, 2);
 			exit(EXIT_FAILURE);
 		}
