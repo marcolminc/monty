@@ -31,26 +31,31 @@ void push(stack_t **stack, const unsigned int line_number)
 {
 	int value;
 	stack_t *new;
+	char *tok;
 
-	if (is_full_int(strtok(NULL, " \n"), &value))
+	tok = strtok(NULL, " \t\n");
+	if (tok)
 	{
-		if (!*stack)
+		if (is_full_int(tok, &value))
 		{
-			*stack = create_node();
-			(*stack)->n = value;
-		}
-		else
-		{
-			new = create_node();
-			new->n = value;
-			(*stack)->next = new;
-			new->prev = *stack;
+			if (!*stack)
+			{
+				*stack = create_node();
+				(*stack)->n = value;
+			}
+			else
+			{
+				new = create_node();
+				new->n = value;
+				(*stack)->next = new;
+				new->prev = *stack;
 
-			*stack = new;
+				*stack = new;
+			}
+			return;
 		}
-		return;
 	}
-	printf("L%u: usage: push integer\n", line_number);
+	fprintf(stderr, "L%u: usage: push integer\n", line_number);
 	exit(EXIT_FAILURE);
 }
 
