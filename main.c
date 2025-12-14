@@ -25,7 +25,7 @@ int main(const int argc, char *argv[])
 	{
 		nline++;
 		in_tbl = 0;
-		opcode = parse_opcode(strtok(line, " \t\n"));
+		opcode = strtok(line, " \t\n");
 		if (opcode)
 		{
 			for (i = 0; i < 2; i++)
