@@ -103,3 +103,20 @@ void free_stack(stack_t **stack)
 	}
 }
 
+
+/**
+ * pint - prints the value at the top of the stack
+ * @stack: the stack
+ * @line_number: number of Monty Bytecode line currently being executed
+ *
+ * Return: nothing
+ */
+void pint(stack_t **stack, const unsigned int line_number)
+{
+	if (!*stack)
+	{
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	printf("%d\n", (*stack)->n);
+}
