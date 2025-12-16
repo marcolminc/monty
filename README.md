@@ -121,4 +121,4 @@ julien@ubuntu:~/monty$
 5. 4 - add: implement the add opcode
 6. 5 - nop: implement the nop opcode
 7. 6 - sub: implement the sub opcode
-
+8. 7 - div: implement the div opcode
