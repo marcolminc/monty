@@ -118,4 +118,7 @@ julien@ubuntu:~/monty$
 2. 1 - pint: implement the pint opcode
 3. 2 - pop: implement the pop opcode
 4. 3 - swap: implement the swap opcode
+5. 4 - add: implement the add opcode
+6. 5 - nop: implement the nop opcode
+7. 6 - sub: implement the sub opcode
 
