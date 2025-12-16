@@ -117,4 +117,5 @@ julien@ubuntu:~/monty$
     * `pall` prints all the values on the stack, starting from top of the stack
 2. 1 - pint: implement the pint opcode
 3. 2 - pop: implement the pop opcode
+4. 3 - swap: implement the swap opcode
 
