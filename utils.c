@@ -34,11 +34,11 @@ instruction_t **init_op_tbl(void)
 	size_t i;
 	instruction_t *inst, **tbl;
 	char *opcodes[] = {
-		"push", "pall", "pint", "pop", "swap"
+		"push", "pall", "pint", "pop", "swap", "add"
 	};
 
 	const Operation f_arr[] = {
-		push, pall, pint, pop, swap
+		push, pall, pint, pop, swap, add
 	};
 
 	tbl = malloc((sizeof(f_arr) / sizeof(f_arr[0])) * sizeof(instruction_t *));

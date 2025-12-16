@@ -11,12 +11,12 @@
 char *parse_opcode(char *tok)
 {
 	size_t i;
-	char *opcodes[5] = {
-		"push", "pall", "pint", "pop", "swap"
+	char *opcodes[6] = {
+		"push", "pall", "pint", "pop", "swap", "add"
 	};
 
 	if (tok)
-		for (i = 0; i < 5; i++)
+		for (i = 0; i < 6; i++)
 			if (strcmp(opcodes[i], tok) == 0)
 				return (tok);
 	return (NULL);
