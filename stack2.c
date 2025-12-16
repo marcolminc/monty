@@ -51,3 +51,15 @@ void swap(stack_t **stack, const unsigned int line_number)
 	l->next = r;
 	*stack = r;
 }
+
+
+/**
+ * nop - doesn't do anything
+ * @stack: the stack data structure
+ * @line_number: Monty Bytecode line number currently being executed
+ */
+void nop(stack_t **stack, const unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+}
