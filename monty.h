@@ -68,6 +68,7 @@ void swap(stack_t **, unsigned int);
 void nop(stack_t **, unsigned int);
 void add(stack_t **, unsigned int);
 void sub(stack_t **, unsigned int);
+void mul(stack_t **, unsigned int);
 void _div(stack_t **, unsigned int);
 void free_stack(stack_t **);
 void free_op_tbl(instruction_t **, unsigned int);

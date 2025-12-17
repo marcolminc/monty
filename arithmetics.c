@@ -71,3 +71,26 @@ void _div(stack_t **stack, const unsigned int line_number)
 	dividend->n = dividend->n / divisor->n;
 	pop(stack, line_number);
 }
+
+
+/**
+ * mul - multiplies the second top element of the stack with the top element
+ * of the stack
+ * @stack: the stack
+ * @line_number: Monty Bytecode line number currently being executed
+ *
+ * Return: nothing
+ */
+void mul(stack_t **stack, const unsigned int line_number)
+{
+	stack_t *multiplicand, *multiplier;
+
+	if (!*stack || !(*stack)->prev)
+	{
+		fprintf(stderr, "L%u: can't add, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	multiplier = *stack, multiplicand = (*stack)->prev;
+	multiplicand->n *= multiplier->n;
+	pop(stack, line_number);
+}
