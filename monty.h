@@ -53,7 +53,6 @@ char *buff_init(const size_t *);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 size_t _getline(char **lineptr, size_t *n, FILE *stream);
 char *_strdup(char *);
-char *parse_opcode(char *);
 FILE *open_file(int, const char **);
 void _perror(size_t, const char *);
 void cleanup(char *, stack_t **, FILE *, instruction_t **, size_t);
