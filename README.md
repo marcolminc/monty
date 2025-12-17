@@ -127,4 +127,4 @@ julien@ubuntu:~/monty$
 10. 9 - mod: implement the mod opcode
 11. 10 - comments: implement the capability of commenting
 12. 11 - pchar: implement the pchar opcode
-
+13. 12 - pstr: implement the pstr opcode

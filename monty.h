@@ -71,6 +71,7 @@ void mul(stack_t **, unsigned int);
 void _div(stack_t **, unsigned int);
 void mod(stack_t **, unsigned int);
 void pchar(stack_t **, unsigned int);
+void pstr(stack_t **, unsigned int);
 void free_stack(stack_t **);
 void free_op_tbl(instruction_t **, unsigned int);
 
