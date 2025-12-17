@@ -2,29 +2,6 @@
 
 
 /**
- * parse_opcode - finds out if a supposed opcode is indeed in the
- * operations table
- * @tok: supposed opcode string
- *
- * Return: definite opcode if in the operations table, null otherwise
- */
-char *parse_opcode(char *tok)
-{
-	size_t i;
-	char *opcodes[11] = {
-		"push", "pall", "pint", "pop", "swap", "add", "nop", "sub",
-		"div", "mul", "mod"
-	};
-
-	if (tok)
-		for (i = 0; i < 11; i++)
-			if (strcmp(opcodes[i], tok) == 0)
-				return (tok);
-	return (NULL);
-}
-
-
-/**
  * free_op_tbl - frees the operations table memory block
  * @tbl: the operations table
  * @size: size of the operations table
