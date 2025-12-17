@@ -1,3 +1,5 @@
+#include <string.h>
+
 #include "monty.h"
 
 
@@ -21,11 +23,11 @@ int main(const int argc, char *argv[])
 	size = BUFF_SIZE, line = NULL, nline = 0, stack = NULL;
 	while (((nread = _getline(&line, &size, fp))) && nread != (size_t)-1)
 	{
-		nline++;
-		in_tbl = 0;
-		opcode = strtok(line, " \t\n");
+		nline++, in_tbl = 0, opcode = strtok(line, " \t\n");
 		if (opcode)
 		{
+			if (*opcode == '#')
+				continue;
 			for (i = 0; i < 11; i++)
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
 					in_tbl++, op_tbl[i]->f(&stack, nline);
