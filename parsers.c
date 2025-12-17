@@ -21,44 +21,4 @@ void free_op_tbl(instruction_t **tbl, const unsigned int size)
 }
 
 
-/**
- * is_full_int - converts a string token to integer making sure it's
- * all a number
- * @str: the token (str) to convert to integer
- * @num: the variable to store the (converted) integer to
- *
- * Return: (int) 1 if the string token is whole converted to integer, 0
- * otherwise
- */
-int is_full_int(const char *str, int *num)
-{
-	int count;
-	const signed int chars_assigned = sscanf(str, "%d%n", num, &count);
-
-	if (chars_assigned != 1)
-		return (0);
-	if (count == (int)strlen(str))
-		return (1);
-	return (0);
-}
-
-
-FILE *open_file(const int argc, const char **argv)
-{
-	FILE *fp;
-
-	if (argc != 2)
-	{
-		fprintf(stderr, "USAGE: monty file\n");
-		exit(EXIT_FAILURE);
-	}
-	fp = fopen(argv[1], "r");
-
-	if (!fp)
-	{
-		fprintf(stderr, "Error: Can't open file HoLbErToN\n");
-		exit(EXIT_FAILURE);
-	}
-	return (fp);
-}
 
