@@ -27,13 +27,8 @@ int main(const int argc, char *argv[])
 		if (opcode)
 		{
 			for (i = 0; i < 11; i++)
-			{
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
-				{
-					in_tbl++;
-					op_tbl[i]->f(&stack, nline);
-				}
-			}
+					in_tbl++, op_tbl[i]->f(&stack, nline);
 		}
 		if (opcode && !in_tbl)
 		{
