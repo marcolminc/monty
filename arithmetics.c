@@ -94,3 +94,32 @@ void mul(stack_t **stack, const unsigned int line_number)
 	multiplicand->n *= multiplier->n;
 	pop(stack, line_number);
 }
+
+
+/**
+ * mod - computes the rest of the division of the second top element of the
+ * stack by the top element of the stack
+ * of the stack
+ * @stack: the stack
+ * @line_number: Monty Bytecode line number currently being executed
+ *
+ * Return: nothing
+ */
+void mod(stack_t **stack, const unsigned int line_number)
+{
+	stack_t *dividend, *divisor;
+
+	if (!*stack || !(*stack)->prev)
+	{
+		fprintf(stderr, "L%u: can't mod, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	divisor = *stack, dividend = (*stack)->prev;
+	if (divisor->n == 0)
+	{
+		fprintf(stderr, "L%u: division by zero\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	dividend->n = dividend->n % divisor->n;
+	pop(stack, line_number);
+}

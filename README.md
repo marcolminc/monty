@@ -123,4 +123,5 @@ julien@ubuntu:~/monty$
 7. 6 - sub: implement the sub opcode
 8. 7 - div: implement the div opcode
 9. 8 - mul: implement the mul opcode
+10. 9 - mod: implement the mod opcode
 
