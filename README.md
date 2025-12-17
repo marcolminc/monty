@@ -122,3 +122,5 @@ julien@ubuntu:~/monty$
 6. 5 - nop: implement the nop opcode
 7. 6 - sub: implement the sub opcode
 8. 7 - div: implement the div opcode
+9. 8 - mul: implement the mul opcode
+
