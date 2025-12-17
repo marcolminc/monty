@@ -2,22 +2,15 @@
 
 
 /**
- * free_op_tbl - frees the operations table memory block
- * @tbl: the operations table
- * @size: size of the operations table
+ * _perror - custom function for printing opcode-related error
+ * @nline: number of Monty bytecodes line currently being executed
+ * @tok: the opcode (supposedly) being worked on
  *
  * Return: nothing
  */
-void free_op_tbl(instruction_t **tbl, const unsigned int size)
+void _perror(const size_t nline, const char *tok)
 {
-	size_t i;
-
-	for (i = 0; i < size; i++)
-	{
-		free(tbl[i]->opcode);
-		free(tbl[i]);
-	}
-	free(tbl);
+	fprintf(stderr, "L%lu: unknown instruction %s\n", nline, tok);
 }
 
 
