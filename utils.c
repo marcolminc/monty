@@ -13,6 +13,17 @@ void _perror(const size_t nline, const char *tok)
 	fprintf(stderr, "L%lu: unknown instruction %s\n", nline, tok);
 }
 
+
+/**
+ * cleanup - clears and returns resources
+ * @line: Monty Bytecode line currently being executed
+ * @stack: the stack
+ * @fp: Monty Bytecode file pointer
+ * @op_tbl: the opcodes table
+ * @op_tbl_size: size of op_tbl
+ *
+ * Return: nothing
+ */
 void cleanup(char *line, stack_t **stack, FILE *fp, instruction_t **op_tbl,
 	size_t op_tbl_size)
 {
