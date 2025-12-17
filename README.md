@@ -125,4 +125,6 @@ julien@ubuntu:~/monty$
 8. 7 - div: implement the div opcode
 9. 8 - mul: implement the mul opcode
 10. 9 - mod: implement the mod opcode
+11. 10 - comments: implement the capability of commenting
+12. 11 - pchar: implement the pchar opcode
 
