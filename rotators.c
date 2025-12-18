@@ -9,7 +9,7 @@
  *
  * Return: nothing
  */
-void rotl(stack_t ** stack, unsigned int line_number)
+void rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *top, *bottom;
 	(void)line_number;

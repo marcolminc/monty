@@ -1,7 +1,14 @@
 #include "monty.h"
 
 
-void pchar(stack_t ** stack, unsigned int line_number)
+/**
+ * pchar - prints the ASCII character from the integer value at top of stack
+ * @stack: the stack
+ * @line_number: Monty Bytecode line currently being executed
+ *
+ * Return: nothing
+ */
+void pchar(stack_t **stack, unsigned int line_number)
 {
 	if (!*stack)
 	{
@@ -24,7 +31,7 @@ void pchar(stack_t ** stack, unsigned int line_number)
  *
  * Return: nothing
  */
-void pstr(stack_t ** stack, unsigned int line_number)
+void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp;
 	(void)line_number;
@@ -32,8 +39,7 @@ void pstr(stack_t ** stack, unsigned int line_number)
 	if (*stack)
 	{
 		tmp = *stack;
-		do
-		{
+		do {
 			if (tmp->n <= 0 || tmp->n > 127)
 				break;
 			printf("%c", tmp->n);
