@@ -128,3 +128,4 @@ julien@ubuntu:~/monty$
 11. 10 - comments: implement the capability of commenting
 12. 11 - pchar: implement the pchar opcode
 13. 12 - pstr: implement the pstr opcode
+14. 13 - rotl: implement the rotl opcode
