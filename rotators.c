@@ -1,5 +1,3 @@
-#include <time.h>
-
 #include "monty.h"
 
 /**
