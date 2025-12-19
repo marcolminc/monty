@@ -34,12 +34,12 @@ instruction_t **init_op_tbl(void)
 	instruction_t *inst, **tbl;
 	char *opcodes[] = {
 		"push", "pall", "pint", "pop", "swap", "add", "nop", "sub",
-		"div", "mul", "mod", "pchar", "pstr", "rotl"
+		"div", "mul", "mod", "pchar", "pstr", "rotl", "rotr"
 	};
 
 	const Operation f_arr[] = {
 		push, pall, pint, pop, swap, add, nop, sub, _div, mul, mod,
-		pchar, pstr, rotl
+		pchar, pstr, rotl, rotr
 	};
 
 	tbl = malloc((sizeof(f_arr) / sizeof(f_arr[0])) * sizeof(instruction_t *));
@@ -132,5 +132,4 @@ void free_op_tbl(instruction_t **tbl, const unsigned int size)
 	}
 	free(tbl);
 }
-
 

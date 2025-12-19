@@ -129,3 +129,5 @@ julien@ubuntu:~/monty$
 12. 11 - pchar: implement the pchar opcode
 13. 12 - pstr: implement the pstr opcode
 14. 13 - rotl: implement the rotl opcode
+15. 14 - rotr: implement the rotr opcode
+
