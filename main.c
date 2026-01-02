@@ -28,18 +28,18 @@ int main(const int argc, char *argv[])
 		{
 			if (*opcode == '#')
 				continue;
-			for (i = 0; i < 15; i++)
+			for (i = 0; i < 17; i++)
 				if (strcmp(op_tbl[i]->opcode, opcode) == 0)
 					in_tbl++, op_tbl[i]->f(&stack, nline);
 		}
 		if (opcode && !in_tbl)
 		{
 			_perror(nline, opcode);
-			cleanup(line, &stack, fp, op_tbl, 15);
+			cleanup(line, &stack, fp, op_tbl, 17);
 			exit(EXIT_FAILURE);
 		}
 	}
-	cleanup(line, &stack, fp, op_tbl, 15);
+	cleanup(line, &stack, fp, op_tbl, 17);
 	exit(EXIT_SUCCESS);
 }
 

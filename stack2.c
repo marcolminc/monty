@@ -63,3 +63,33 @@ void nop(stack_t **stack, const unsigned int line_number)
 	(void)stack;
 	(void)line_number;
 }
+
+
+/**
+ * stack - swaps mode to stack
+ * @stack: the data structure whose mode should be swapped
+ * @line_number: Monty Bytecode line number currently being executed
+ *
+ * Return: Nothing
+ */
+void stack(stack_t **stack, const unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	mode = STACK;
+}
+
+
+/**
+ * queue - swaps mode to stack
+ * @stack: the data structure whose mode should be swapped
+ * @line_number: Monty Bytecode line number currently being executed
+ *
+ * Return: Nothing
+ */
+void queue(stack_t **stack, const unsigned int line_number)
+{
+	(void)stack;
+	(void)line_number;
+	mode = QUEUE;
+}

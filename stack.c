@@ -1,6 +1,8 @@
 #include "monty.h"
 
 
+int mode = STACK;
+
 /**
  * create_node - creates a new stack node
  * Return: a new stack node
@@ -30,27 +32,29 @@ stack_t *create_node()
 void push(stack_t **stack, const unsigned int line_number)
 {
 	int value;
-	stack_t *new;
+	stack_t *new, *last;
 	char *tok;
 
-	tok = strtok(NULL, " \t\n");
+	tok = strtok(NULL, " \n");
 	if (tok)
 	{
 		if (is_full_int(tok, &value))
 		{
-			if (!*stack)
-			{
-				*stack = create_node();
-				(*stack)->n = value;
-			}
-			else
-			{
-				new = create_node();
-				new->n = value;
-				(*stack)->next = new;
-				new->prev = *stack;
+			new = create_node();
+			new->n = value;
 
+			if (mode == STACK || !*stack)
+			{
+				if (*stack)
+					(*stack)->next = new, new->prev = *stack;
 				*stack = new;
+			}
+			else if (mode == QUEUE)
+			{
+				last = *stack;
+				while (last->prev)
+					last = last->prev;
+				last->prev = new, new->next = last;
 			}
 			return;
 		}

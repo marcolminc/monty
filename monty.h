@@ -10,7 +10,8 @@
 
 /* definitions */
 #define BUFF_SIZE 1024
-
+#define STACK 0
+#define QUEUE 1
 
 /* data structures */
 /**
@@ -47,6 +48,7 @@ typedef struct instruction_s
 /*extern instruction_t *op_tbl[17];*/
 typedef void (*Operation)(stack_t **, unsigned int);
 
+extern int mode;
 
 /* prototypes */
 char *buff_init(const size_t *);
@@ -74,6 +76,8 @@ void _div(stack_t **, unsigned int);
 void mod(stack_t **, unsigned int);
 void pchar(stack_t **, unsigned int);
 void pstr(stack_t **, unsigned int);
+void stack(stack_t **, unsigned int);
+void queue(stack_t **, unsigned int);
 void free_stack(stack_t **);
 void free_op_tbl(instruction_t **, unsigned int);
 

@@ -130,4 +130,5 @@ julien@ubuntu:~/monty$
 13. 12 - pstr: implement the pstr opcode
 14. 13 - rotl: implement the rotl opcode
 15. 14 - rotr: implement the rotr opcode
+16. 15 - stack, queue: implement the stack and queue opcodes
 
