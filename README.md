@@ -131,4 +131,4 @@ julien@ubuntu:~/monty$
 14. 13 - rotl: implement the rotl opcode
 15. 14 - rotr: implement the rotr opcode
 16. 15 - stack, queue: implement the stack and queue opcodes
-
+17. 16 - brainf*ck: write a brainf*ck script that prints `School`
